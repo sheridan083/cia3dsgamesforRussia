@@ -63,3 +63,9 @@ Captain Toad: Treasure Tracker
 Donkey Kong: County Returns 3D
 ![Donkey Kong: County Returns 3D (только qr)](DonkeyKong3D.png)
 
+
+
+
+New Super Mario Bros. 2
+![New Super Mario Bros. 2](NewMario2.png)
+
