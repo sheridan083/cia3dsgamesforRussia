@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3DS QR Каталог</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #ff3b30;
+            margin-bottom: 10px;
+        }
+        p.subtitle {
+            color: #aaaaaa;
+            margin-bottom: 25px;
+        }
+        #search {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px 15px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: #1e1e1e;
+            color: #fff;
+            margin-bottom: 30px;
+            outline: none;
+        }
+        #search:focus {
+            border-color: #ff3b30;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .card {
+            background: #1e1e1e;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #2c2c2c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card h3 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+        }
+        .card .size {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .card img {
+            width: 220px;
+            height: 220px;
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎮 3DS QR Каталог</h1>
+    <p class="subtitle">Откройте FBI → Remote Install → Scan QR Code и наведите камеру</p>
+
+    <input type="text" id="search" placeholder="Поиск игры по названию..." onkeyup="filterGames()">
+
+    <div class="grid" id="games-grid">
+
+        <!-- НАЧАЛО КАРТОЧКИ ИГРЫ -->
+        <div class="card">
+            <h3>Mario Kart 7</h3>
+            <div class="size">Размер: ~650 МБ</div>
+            <img src="MarioKart7qr.gif" alt="Mario Kart 7">
+        </div>
+        <!-- КОНЕЦ КАРТОЧКИ ИГРЫ -->
+
+        <div class="card">
+            <h3>Super Smash Bros.</h3>
+            <div class="size">Размер: ~1.2 ГБ</div>
+            <img src="Smash3DS.png" alt="Super Smash Bros">
+        </div>
+
+        <div class="card">
+            <h3>Zelda: Ocarina of Time 3D</h3>
+            <div class="size">Размер: ~460 МБ</div>
+            <img src="Zelda3D.gif" alt="Zelda">
+        </div>
+
+        <div class="card">
+            <h3>Kirby: Triple Deluxe</h3>
+            <div class="size">Размер: ~600 МБ</div>
+            <img src="Kirby1_3ds.png" alt="Kirby">
+        </div>
+
+    </div>
+
+    <script>
+        function filterGames() {
+            let input = document.getElementById('search').value.toLowerCase();
+            let cards = document.getElementsByClassName('card');
+            for (let i = 0; i < cards.length; i++) {
+                let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+                cards[i].style.display = title.includes(input) ? "flex" : "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
