@@ -19,23 +19,71 @@
         }
         p.subtitle {
             color: #aaaaaa;
+            margin-bottom: 20px;
+        }
+        /* Кнопка Telegram */
+        .tg-btn {
+            display: inline-block;
+            background-color: #24A1DE;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px 24px;
+            border-radius: 8px;
             margin-bottom: 25px;
+            transition: background 0.2s;
+        }
+        .tg-btn:hover {
+            background-color: #1d86b9;
+        }
+        /* Поиск */
+        .controls {
+            max-width: 600px;
+            margin: 0 auto 20px auto;
         }
         #search {
             width: 100%;
-            max-width: 400px;
+            box-sizing: border-box;
             padding: 12px 15px;
             font-size: 16px;
             border-radius: 8px;
             border: 1px solid #333;
             background: #1e1e1e;
             color: #fff;
-            margin-bottom: 30px;
             outline: none;
         }
         #search:focus {
             border-color: #ff3b30;
         }
+        /* Кнопки разделов */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .tab-btn {
+            background: #1e1e1e;
+            color: #ccc;
+            border: 1px solid #333;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+        .tab-btn:hover {
+            border-color: #ff3b30;
+            color: #fff;
+        }
+        .tab-btn.active {
+            background: #ff3b30;
+            color: #fff;
+            border-color: #ff3b30;
+            font-weight: bold;
+        }
+        /* Сетка карточек */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -53,13 +101,12 @@
             align-items: center;
         }
         .card h3 {
-            margin: 0 0 10px 0;
+            margin: 0 0 15px 0;
             font-size: 18px;
-        }
-        .card .size {
-            color: #888;
-            font-size: 14px;
-            margin-bottom: 15px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .card img {
             width: 220px;
@@ -76,73 +123,105 @@
     <h1>🎮 3DS QR Каталог</h1>
     <p class="subtitle">Откройте FBI → Remote Install → Scan QR Code и наведите камеру</p>
 
-    <input type="text" id="search" placeholder="Поиск игры по названию..." onkeyup="filterGames()">
+    <!-- Кнопка на ТГ канал -->
+    <a href="https://t.me/cia3dsgamesforrussia" target="_blank" class="tg-btn">✈️ Наш Telegram-канал</a>
+
+    <div class="controls">
+        <input type="text" id="search" placeholder="Поиск игры по названию..." onkeyup="filterGames()">
+    </div>
+
+    <!-- КНОПКИ РАЗДЕЛОВ -->
+    <div class="tabs">
+        <button class="tab-btn active" onclick="setCategory('popular', this)">🔥 Популярное</button>
+        <button class="tab-btn" onclick="setCategory('all', this)">Все игры</button>
+    </div>
 
     <div class="grid" id="games-grid">
 
-        <!-- НАЧАЛО КАРТОЧКИ ИГРЫ -->
-        <div class="card">
+        <div class="card" data-category="popular">
             <h3>Mario Kart 7</h3>
             <img src="Mariokart7.png" alt="Mario Kart 7">
         </div>
-        <!-- КОНЕЦ КАРТОЧКИ ИГРЫ -->
 
-        <div class="card">
+        <div class="card" data-category="popular">
             <h3>Super Smash Bros. for Nintendo 3DS</h3>
             <img src="Smash3DS.png" alt="Super Smash Bros">
         </div>
 
-        <div class="card">
+        <div class="card" data-category="popular">
             <h3>The Legend of Zelda: Ocarina of Time 3D</h3>
             <img src="Zelda3D.png" alt="Zelda">
         </div>
 
-        <div class="card">
+        <div class="card" data-category="popular">
             <h3>Kirby: Triple Deluxe</h3>
             <img src="Kirby1_3ds.png" alt="Kirby">
         </div>
-        
-        <div class="card">
-            <h3>Tomadachi Life</h3>
-            <img src="Tomadachi.png" alt="Tomadachi Life">
+
+        <div class="card" data-category="popular">
+            <h3>Tomodachi Life</h3>
+            <img src="Tomadachi.png" alt="Tomodachi Life">
         </div>
 
-         <div class="card">
-            <h3>Capitan Toad: Tresure Tracker</h3>
+        <div class="card" data-category="popular">
+            <h3>Captain Toad: Treasure Tracker</h3>
             <img src="Toad.png" alt="Toad">
         </div>
 
-           <div class="card">
+        <div class="card" data-category="popular">
             <h3>Rhythm Heaven Paradise</h3>
-            <img src="Rhythm.png" alt="heaven">
+            <img src="Rhythm.png" alt="Rhythm">
         </div>
 
-         <div class="card">
+        <div class="card" data-category="popular">
             <h3>New Super Mario Bros. 2</h3>
-            <img src="NewMario2.png" alt="Mario2">
+            <img src="NewMario2.png" alt="Mario 2">
         </div>
 
-          <div class="card">
+        <div class="card" data-category="popular">
             <h3>Animal Crossing: New Leaf</h3>
-            <img src="NewLeaf.png" alt="Leaf">
+            <img src="NewLeaf.png" alt="Animal Crossing">
         </div>
 
-         <div class="card">
+        <div class="card" data-category="popular">
             <h3>Donkey Kong Country Returns 3D</h3>
-            <img src="DonkeyKong3D.png" alt="3D">
+            <img src="DonkeyKong3D.png" alt="Donkey Kong 3D">
         </div>
+
     </div>
 
     <script>
+        let currentCategory = 'popular';
+
+        function setCategory(category, btnElement) {
+            currentCategory = category;
+            
+            // Меняем подсветку активной кнопки
+            let buttons = document.getElementsByClassName('tab-btn');
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove('active');
+            }
+            btnElement.classList.add('active');
+
+            filterGames();
+        }
+
         function filterGames() {
             let input = document.getElementById('search').value.toLowerCase();
             let cards = document.getElementsByClassName('card');
+
             for (let i = 0; i < cards.length; i++) {
                 let title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
-                cards[i].style.display = title.includes(input) ? "flex" : "none";
+                let category = cards[i].getAttribute('data-category');
+
+                let matchesSearch = title.includes(input);
+                let matchesCategory = (currentCategory === 'all') || (category.includes(currentCategory));
+
+                cards[i].style.display = (matchesSearch && matchesCategory) ? "flex" : "none";
             }
         }
     </script>
 
 </body>
 </html>
+
