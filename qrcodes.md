@@ -3,7 +3,7 @@
 Откройте FBI → Remote Install → Scan QR Code и наведите камеру на нужный код.
 
 Mario Kart 7
-![Mario Kart 7](MarioKart7qr.gif)
+![Mario Kart 7](Mariokart7.png)
 
 
 
@@ -16,7 +16,7 @@ Super Smash Bros. for Nintendo 3DS
 
 
 The Legend of Zelda: Ocarina of Time 3D
-![Zelda OoT 3D](Zelda3D.gif)
+![Zelda OoT 3D](Zelda3D.png)
 
 
 
