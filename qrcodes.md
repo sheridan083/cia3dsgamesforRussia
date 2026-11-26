@@ -2,6 +2,13 @@
 
 Откройте FBI → Remote Install → Scan QR Code и наведите камеру на нужный код.
 
+
+
+
+
+
+
+
 Mario Kart 7
 ![Mario Kart 7](Mariokart7.png)
 
@@ -36,4 +43,17 @@ Animal Crossing: New Leaf
 
 Tomadachi Life
 ![Tomadachi Life](Tomadachi.png)
+
+
+
+
+Rhythm Heaven Megamix
+![Rhythm Heaven Megamix](Rhythm.png)
+
+
+
+
+Captain Toad: Treasure Tracker
+[Captain Toad: Treasure Tracker](Toad.png)
+
 
