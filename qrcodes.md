@@ -54,6 +54,6 @@ Rhythm Heaven Megamix
 
 
 Captain Toad: Treasure Tracker
-[Captain Toad: Treasure Tracker](Toad.png)
+![Captain Toad: Treasure Tracker](Toad.png)
 
 
