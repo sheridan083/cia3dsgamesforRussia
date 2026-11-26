@@ -25,3 +25,15 @@ The Legend of Zelda: Ocarina of Time 3D
 Kirby: Triple Deluxe
 ![Kirby Triple Deluxe](Kirby1_3ds.png)
 
+
+
+
+Animal Crossing: New Leaf
+![Animal Crossing: New Leaf](NewLeaf.png)
+
+
+
+
+Tomadachi Life
+![Tomadachi Life](Tomadachi.png)
+
