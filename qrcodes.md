@@ -61,5 +61,5 @@ Captain Toad: Treasure Tracker
 
 
 Donkey Kong: County Returns 3D
-![Donkey Kong: County Returns 3D (только qr)](DonkeyKong3D.cia)
+![Donkey Kong: County Returns 3D (только qr)](DonkeyKong3D.png)
 
